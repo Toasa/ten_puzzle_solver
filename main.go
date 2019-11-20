@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"os"
 	"strconv"
 )
@@ -11,6 +12,13 @@ type Solver struct {
 	nums    []int
 	target  int
 	results []string
+}
+
+func (S Solver) printResults() {
+	fmt.Println("\nResult")
+	for i, r := range S.results {
+		fmt.Printf("%dth: %s\n", i, r)
+	}
 }
 
 func storeNum(S *Solver) {
