@@ -21,7 +21,7 @@ func (S Solver) printResults() {
 	}
 }
 
-func storeNum(S *Solver) {
+func (S *Solver) storeNum() {
 	var sc = bufio.NewScanner(os.Stdin)
 	for i := 0; i < S.N; i++ {
 		if sc.Scan() {
@@ -37,5 +37,5 @@ func main() {
 		N:      4,
 		target: 10,
 	}
-	storeNum(&S)
+	S.storeNum()
 }
